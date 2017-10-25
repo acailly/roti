@@ -1829,6 +1829,12 @@ debug@^3.1.0:
   dependencies:
     ms "2.0.0"
 
+debug@~3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.0.1.tgz#0564c612b521dc92d9f2988f0549e34f9c98db64"
+  dependencies:
+    ms "2.0.0"
+
 decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -3189,6 +3195,14 @@ https-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
 
+hyperdiff@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/hyperdiff/-/hyperdiff-2.0.3.tgz#6c68c89d5b3a204e13e0d2c66f8fc49d96f4e686"
+  dependencies:
+    debug "~3.0.0"
+    lodash.clonedeep "~4.5.0"
+    lodash.pullat "~4.6.0"
+
 iana-hashes@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/iana-hashes/-/iana-hashes-1.0.3.tgz#beaa6f20ea483f0f3adf5ffe6f594bb50c928caa"
@@ -3333,6 +3347,16 @@ ipaddr.js@1.5.2:
 ipaddr.js@^1.5.2:
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.5.4.tgz#962263d9d26132956fc5c630b638a30d3cdffc14"
+
+ipfs-pubsub-room@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/ipfs-pubsub-room/-/ipfs-pubsub-room-0.4.0.tgz#3f31ca795baf49c0fb223c17858fb350b9159850"
+  dependencies:
+    hyperdiff "^2.0.3"
+    lodash.clonedeep "^4.5.0"
+    pull-pushable "^2.1.1"
+    pull-stream "^3.6.1"
+    safe-buffer "^5.1.1"
 
 is-absolute-url@^2.0.0:
   version "2.1.0"
@@ -4128,6 +4152,10 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
+lodash.clonedeep@^4.5.0, lodash.clonedeep@~4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+
 lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
@@ -4193,6 +4221,10 @@ lodash.pluck@^3.0.2:
     lodash._topath "^3.0.0"
     lodash.isarray "^3.0.0"
     lodash.map "^3.0.0"
+
+lodash.pullat@~4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.pullat/-/lodash.pullat-4.6.0.tgz#bdfacf0e209fd27f965e711fa65a774a84d30261"
 
 lodash.template@^4.4.0:
   version "4.4.0"
@@ -5285,6 +5317,14 @@ public-encrypt@^4.0.0:
     create-hash "^1.1.0"
     parse-asn1 "^5.0.0"
     randombytes "^2.0.1"
+
+pull-pushable@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/pull-pushable/-/pull-pushable-2.1.1.tgz#86666abbe3f5402f1f7ead03eefd69b785eca5b8"
+
+pull-stream@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-3.6.1.tgz#c5c2ae4a51246efeebcc65c0412a3d725a92ce00"
 
 punycode@1.3.2:
   version "1.3.2"
@@ -6911,6 +6951,15 @@ xtend@^4.0.0, xtend@^4.0.1:
 y-array@^10.1.4:
   version "10.1.4"
   resolved "https://registry.yarnpkg.com/y-array/-/y-array-10.1.4.tgz#e131a5b030d6dcbca10268d4293ecf44bdae7b34"
+
+y-ipfs-connector@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/y-ipfs-connector/-/y-ipfs-connector-1.4.0.tgz#5e7cb1eba7e9d1a1c3f1a280bf5a0200c19ed79e"
+  dependencies:
+    async "^2.4.1"
+    debug "^3.1.0"
+    ipfs-pubsub-room "^0.4.0"
+    safe-buffer "^5.1.1"
 
 y-map@^10.1.3:
   version "10.1.3"
