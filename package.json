@@ -1,6 +1,7 @@
 {
   "name": "roti",
   "version": "0.1.0",
+  "homepage": "http://acailly.github.io/roti",
   "private": true,
   "dependencies": {
     "react": "^16.0.0",
