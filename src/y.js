@@ -1,8 +1,8 @@
-import Y from 'yjs'
-import yMemory from 'y-memory'
-import yWebrtc from 'y-webrtc'
-import yArray from 'y-array'
-import yMap from 'y-map'
+import Y from 'yjs/dist/y'
+import yMemory from 'y-memory/dist/y-memory'
+import yWebrtc from 'y-webrtc/dist/y-webrtc'
+import yArray from 'y-array/dist/y-array'
+import yMap from 'y-map/dist/y-map'
 
 yMemory(Y)
 yWebrtc(Y)
