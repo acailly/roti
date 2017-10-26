@@ -19,9 +19,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "postinstall": "babel node_modules/cids/src/index.js --out-file node_modules/cids/src/index.js --presets=es2015,babili"
   },
   "devDependencies": {
+    "babili": "^0.1.4",
     "gh-pages": "^1.0.0"
   }
 }
