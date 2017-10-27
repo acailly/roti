@@ -209,7 +209,12 @@ var files = [
 	"node_modules/hyperdiff/lib/index.js",
 	"node_modules/ipfs-pubsub-room/src/connection.js",
 	"node_modules/y-ipfs-connector/src/encode.js",
-	"node_modules/y-ipfs-connector/src/decode.js"
+	"node_modules/y-ipfs-connector/src/decode.js",
+	"node_modules/cids/node_modules/multicodec/src/varint-table.js",
+	"node_modules/cids/node_modules/multicodec/src/util.js",
+	"node_modules/ipfs-block/node_modules/cids/src/index.js",
+	"node_modules/cids/node_modules/multicodec/src/index.js",
+	"node_modules/cids/node_modules/multicodec/src/name-table.js"
 ]
 
 files.map(function(file){

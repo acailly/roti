@@ -2,7 +2,7 @@ var exec = require('child_process').exec;
 var execSync = require('child_process').execSync;
 
 //var failedToMinifyRegex = /Failed to minify the code from this file.*(node_modules[\w\/]*)\:/
-var failedToMinifyRegex = /Failed to minify the code from this file[\w\W]*(node_modules[\.\w\/-]*)\:/m
+var failedToMinifyRegex = /Failed to minify the code from this file[\w\W]*\.\/(node_modules[\.\w\/-]*)\:/m
 
 var files = []
 
