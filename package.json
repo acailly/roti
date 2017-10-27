@@ -20,31 +20,11 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
-    "fix1": "babel node_modules/cids/src/index.js --out-file node_modules/cids/src/index.js --presets=es2015,babili",
-    "fix2": "babel node_modules/multihashes/src/index.js --out-file node_modules/multihashes/src/index.js --presets=es2015,babili",
-    "fix3": "babel node_modules/multihashing-async/src/index.js --out-file node_modules/multihashing-async/src/index.js --presets=es2015,babili",
-    "fix4": "babel node_modules/peer-id/src/index.js --out-file node_modules/peer-id/src/index.js --presets=es2015,babili",
-    "fix5": "babel node_modules/multiaddr/src/index.js --out-file node_modules/multiaddr/src/index.js --presets=es2015,babili",
-    "fix6": "babel node_modules/peer-info/src/index.js --out-file node_modules/peer-info/src/index.js --presets=es2015,babili",
-    "fix7": "babel node_modules/ipfs-unixfs/src/index.js --out-file node_modules/ipfs-unixfs/src/index.js --presets=es2015,babili",
-    "fix8": "babel node_modules/ipld-dag-pb/src/dag-link/index.js --out-file node_modules/ipld-dag-pb/src/dag-link/index.js --presets=es2015,babili",
-    "fix9": "babel node_modules/ipfs-bitswap/src/utils.js --out-file node_modules/ipfs-bitswap/src/utils.js --presets=es2015,babili",
-    "fix10": "babel node_modules/ipfs-block/src/index.js --out-file node_modules/ipfs-block/src/index.js --presets=es2015,babili",
-    "fix11": "babel node_modules/ipld-ethereum/util/createResolver.js --out-file node_modules/ipld-ethereum/util/createResolver.js --presets=es2015,babili",
-    "fix12": "babel node_modules/datastore-core/src/keytransform.js --out-file node_modules/datastore-core/src/keytransform.js --presets=es2015,babili",
-    "fix13": "babel node_modules/ipld-dag-pb/src/dag-node/create.js --out-file node_modules/ipld-dag-pb/src/dag-node/create.js --presets=es2015,babili",
-    "fix14": "babel node_modules/ipld-dag-pb/src/dag-node/util.js --out-file node_modules/ipld-dag-pb/src/dag-node/util.js --presets=es2015,babili",
-    "fix15": "babel node_modules/ipld-git/src/util/util.js --out-file node_modules/ipld-git/src/util/util.js --presets=es2015,babili",
-    "fix16": "babel node_modules/smart-buffer/build/smartbuffer.js --out-file node_modules/smart-buffer/build/smartbuffer.js --presets=es2015,babili",
-    "fix17": "babel node_modules/mafmt/src/index.js --out-file node_modules/mafmt/src/index.js --presets=es2015,babili",
-    "fix18": "babel node_modules/ipfs-bitswap/src/types/message/index.js --out-file node_modules/ipfs-bitswap/src/types/message/index.js --presets=es2015,babili",
-    "fix19": "babel node_modules/ipfs-bitswap/src/types/wantlist/index.js --out-file node_modules/ipfs-bitswap/src/types/wantlist/index.js --presets=es2015,babili",
-    "fix20": "babel node_modules/libp2p-swarm/src/protocol-muxer.js --out-file node_modules/libp2p-swarm/src/protocol-muxer.js --presets=es2015,babili",
-    "fix21": "babel node_modules/multistream-select/src/util.js --out-file node_modules/multistream-select/src/util.js --presets=es2015,babili",
-    "fix22": "babel node_modules/interface-datastore/src/utils.js --out-file node_modules/interface-datastore/src/utils.js --presets=es2015,babili"
+    "fix": "node fix",
+    "build:fix": "node buildFix"
   },
   "devDependencies": {
-    "babili": "^0.1.4",
+    "babel-cli": "^6.26.0",
     "gh-pages": "^1.0.0"
   }
 }
