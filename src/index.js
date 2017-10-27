@@ -18,7 +18,7 @@ yMap(Y)
 
 
 function repo () {
-return 'ipfs/yjs-demo/' + Math.random()
+return 'ipfs/acailly-yjs-demo/' + Math.random()
 }
 
 const ipfs = new IPFS({
@@ -28,7 +28,11 @@ const ipfs = new IPFS({
     }
 })
 
-ipfs.once('ready', () => ipfs.id((err, info) => {
+ipfs.on('error', (err) => {
+	console.error(err)
+}) 
+
+ipfs.on('ready', () => ipfs.id((err, info) => {
     if (err) { throw err }
 
     console.log('IPFS node ready with address ' + info.id)
