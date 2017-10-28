@@ -47,14 +47,16 @@ ipfs.on('ready', () => ipfs.id((err, info) => {
             ipfs: ipfs
         },
         share: { 
-            votes: 'Array'
+            0: 'Array',
+            1: 'Array',
+            2: 'Array',
+            3: 'Array',
+            4: 'Array',
+            messages: 'Array'
         }
     }).then(function (y) {
         window.y = y
         console.log('Yjs instance ready!')
-        window.y.share.votes.observe(function(event){
-            console.dir(event)
-        })
         
         ReactDOM.render(<App />, document.getElementById('root'));
         registerServiceWorker();

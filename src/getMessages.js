@@ -1,0 +1,1 @@
+export default () => window.y.share.messages.toArray()

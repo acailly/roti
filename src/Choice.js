@@ -1,24 +1,42 @@
 import React, {Component} from 'react'
+import identity from './identity'
+import addVoteFor from './addVoteFor'
+import removeVoteFor from './removeVoteFor'
+import getVoteCountForLevel from './getVoteCountForLevel'
+
+const labels = [
+    '1 - Inutile',
+    '2 - Bof',
+    '3 - Sans plus',
+    '4 - Bon',
+    '5 - Excellent'
+]
 
 class Choice extends Component {
     
-    state = {votes: []}
+    state = {voteCount: 0}
 
     addVote = () => {
-        window.y.share.votes.push(['one vote'])
+        const {level} = this.props
+        removeVoteFor(identity)
+        addVoteFor(identity, level)
     }
 
     componentDidMount(){
-        window.y.share.votes.observe(event => {
-            this.setState({votes: window.y.share.votes.toArray()})
+        const {level} = this.props
+        window.y.share[level].observe(event => {
+            this.setState({voteCount: getVoteCountForLevel(level)})
         })
     }
 
     render(){
+        const {level} = this.props
+        const label = labels[level]
+
         return (
             <div>
-                <button type='button' onClick={this.addVote}>Click me</button>
-                <span>{this.state.votes.length}</span>
+                <button type='button' onClick={this.addVote}>{label}</button>
+                <span>{this.state.voteCount}</span>
             </div>
         )
     }
