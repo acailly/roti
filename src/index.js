@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -37,29 +36,37 @@ ipfs.on('ready', () => ipfs.id((err, info) => {
 
     console.log('IPFS node ready with address ' + info.id)
 
-    Y({
-        db: {
-            name: 'memory' 
-        },
-        connector: {
-            name: 'ipfs',
-            room: 'acailly-roti',
-            ipfs: ipfs
-        },
-        share: { 
-            0: 'Array',
-            1: 'Array',
-            2: 'Array',
-            3: 'Array',
-            4: 'Array',
-            messages: 'Array'
-        }
-    }).then(function (y) {
-        window.y = y
-        console.log('Yjs instance ready!')
+    ipfs.id((err, peerId) => {
+        if (err) { throw err }
         
-        ReactDOM.render(<App />, document.getElementById('root'));
-        registerServiceWorker();
+        console.log('Peer ID is:', peerId)
+
+        window.peerId = peerId
+
+        Y({
+            db: {
+                name: 'memory' 
+            },
+            connector: {
+                name: 'ipfs',
+                room: 'acailly-roti',
+                ipfs: ipfs
+            },
+            share: { 
+                0: 'Array',
+                1: 'Array',
+                2: 'Array',
+                3: 'Array',
+                4: 'Array',
+                messages: 'Array'
+            }
+        }).then(function (y) {
+            window.y = y
+            console.log('Yjs instance ready!')
+            
+            ReactDOM.render(<App />, document.getElementById('root'));
+            registerServiceWorker();
+        })
     })
 }))
 

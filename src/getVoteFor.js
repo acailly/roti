@@ -1,9 +1,9 @@
 import {includes, head, range} from 'lodash'
 
-export default value => 
+export default identity => 
     head(
         range(0, 5)
             .filter(level => {
-                includes(window.y.share[level].toArray(), value)
+                return includes(window.y.share[level].toArray(), identity)
             })
     )

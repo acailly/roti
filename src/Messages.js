@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Card, CardText} from 'material-ui/Card';
 
 import getMessages from './getMessages'
 
@@ -13,13 +14,18 @@ class Messages extends Component {
     }
 
     render() {
-        const messageItems = this.state.messages.map((message, messageIndex) => 
-            <li key={messageIndex}>{message}</li>
-        )
+        const messageItems = this.state.messages.map((message, messageIndex) => ( 
+            <Card 
+                key={messageIndex} 
+                style={{marginBottom: '5px', width: '80vw'}}
+            >
+                <CardText><i>{message}</i></CardText>
+            </Card>
+        ))
         return (
-            <ul>
+            <div style={{flex: '1 1 auto', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 {messageItems}
-            </ul>
+            </div>
         )
     }
 
