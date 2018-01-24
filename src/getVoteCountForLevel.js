@@ -1,2 +1,3 @@
-export default level => 
-    window.y.share[level].toArray().length
+import store from "./store";
+
+export default level => store.getState()[level].length;

@@ -1,1 +1,3 @@
-export default () => window.y.share.messages.toArray()
+import store from "./store";
+
+export default () => store.getState().messages;

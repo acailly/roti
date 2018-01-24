@@ -1,3 +1,9 @@
-export default (message) => {
-    window.y.share.messages.push([message])
-}
+import MPL from "mpl";
+
+export const ADD_MESSAGE = "ADD_MESSAGE";
+
+export const addMessage = (state, { message }) => {
+  return MPL.Automerge.change(oldState, "add message", newState => {
+    newState.messages.push([message]);
+  });
+};
