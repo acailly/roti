@@ -2,13 +2,15 @@ import MPL from "mpl";
 
 export const INIT = "INIT";
 
-export const init = (state, action) => {
+export const init = (oldState, action) => {
   return MPL.Automerge.change(oldState, "initialization", newState => {
     newState.messages = [];
-    newState[0] = [];
-    newState[1] = [];
-    newState[2] = [];
-    newState[3] = [];
-    newState[4] = [];
+    newState.votes = {
+      0: [],
+      1: [],
+      2: [],
+      3: [],
+      4: []
+    };
   });
 };

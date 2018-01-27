@@ -33,8 +33,8 @@ class Choice extends Component {
 
   addVote = () => {
     const { level } = this.props;
-    this.dispatch({ type: REMOVE_VOTE, identity });
-    this.dispatch({ type: ADD_VOTE, identity, level });
+    store.dispatch({ type: REMOVE_VOTE, identity });
+    store.dispatch({ type: ADD_VOTE, identity, level });
   };
 
   componentDidMount() {

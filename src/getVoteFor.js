@@ -5,6 +5,6 @@ import store from "./store";
 export default identity =>
   head(
     range(0, 5).filter(level => {
-      return includes(store.getState()[level], identity);
+      return includes(store.getState().votes[level], identity);
     })
   );

@@ -29,6 +29,7 @@
     "jest": "20.0.4",
     "lodash": "^4.17.4",
     "material-ui": "^0.19.4",
+    "mpl": "git@github.com:acailly/mpl.git",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",

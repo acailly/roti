@@ -4,9 +4,9 @@ import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
 import store from "./store";
-import { INIT, init } from "./init";
+import { INIT } from "./init";
 
-store.dispatch(INIT);
+store.dispatch({ type: INIT });
 
 ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();
