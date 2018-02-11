@@ -22,7 +22,16 @@ function repo() {
 const ipfs = new IPFS({
   repo: repo(),
   EXPERIMENTAL: {
-    pubsub: true
+    pubsub: true,
+    dht: true
+  },
+  config: {
+    Addresses: {
+      Swarm: [
+        // '/dns4/wrtc-star.discovery.libp2p.io/tcp/443/wss/p2p-webrtc-star' //MORE "BROWSERISH", BUT LESS STABLE
+        '/dns4/ws-star.discovery.libp2p.io/tcp/443/wss/p2p-websocket-star' //MORE STABLE, PREFFERRED FOR LIVE DEMO
+      ]
+    }
   }
 });
 
