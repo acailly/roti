@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import {Card, CardText} from 'material-ui/Card';
 
 import getMessages from './getMessages'
 
-class Messages extends Component {
+class Messages extends PureComponent {
 
     state = {messages: []}
 

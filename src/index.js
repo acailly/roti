@@ -77,7 +77,7 @@ ipfs.on("ready", () =>
         window.y = y;
         console.log("Yjs instance ready!");
 
-        ReactDOM.render(<App />, document.getElementById("root"));
+        ReactDOM.render(<App ipfs={ipfs} />, document.getElementById("root"));
         registerServiceWorker();
       });
     });

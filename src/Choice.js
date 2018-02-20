@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import RaisedButton from 'material-ui/RaisedButton';
 import Avatar from 'material-ui/Avatar';
 import {
@@ -32,7 +32,7 @@ const colors = [
     lightGreen500
 ]
 
-class Choice extends Component {
+class Choice extends PureComponent {
     
     state = {voteCount: 0}
 

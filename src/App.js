@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import ThumbsIcon from 'material-ui/svg-icons/action/thumbs-up-down';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
+import PeerCount from './PeerCount'
 import Choice from './Choice'
 import MessageInput from './MessageInput'
 import Messages from './Messages'
@@ -25,7 +26,7 @@ const styles = {
 }
 
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <MuiThemeProvider>
@@ -34,6 +35,9 @@ class App extends Component {
             style={{backgroundColor: '#aaaaaa'}}
             iconElementLeft={<IconButton><ThumbsIcon /></IconButton>}
             title="ROTI P2P"
+            iconElementRight={
+              <PeerCount ipfs={this.props.ipfs} />
+            }
           />
           <div style={styles.appBody}>
             <div style={styles.choices}>

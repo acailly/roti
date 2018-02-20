@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {isEmpty} from 'lodash'
 
 import addMessage from './addMessage'
 
-class MessageInput extends Component {
+class MessageInput extends PureComponent {
 
     state = {message: ''}
 
